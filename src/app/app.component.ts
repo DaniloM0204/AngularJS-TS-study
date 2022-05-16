@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import { Transferencia } from './models/transferencia.model';
 import { TransferenciaService } from './services/transferencia.service'
 
 @Component({
@@ -7,11 +8,7 @@ import { TransferenciaService } from './services/transferencia.service'
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'bytebank'
+  title = 'bytebank';
 
   constructor(private service: TransferenciaService) {}
-
-  transferir($event: Event) {
-    this.service.adicionar($event)
-  }
 }
